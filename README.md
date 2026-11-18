@@ -94,7 +94,7 @@ AI Incident Response and Compliance Monitoring
 
 ## المشروع الختامي
 
-دليل استجابة وخطة مراقبة يُطبَّقان على حادثة جديدة في جلسة موقوتة تحت الملاحظة؛ وتنفذ مهمة المتابعة اختبارًا لأحد الضوابط. الحادثة في `labs/files/capstone/`: إجابات «شَفيف» عن أضرار المياه بعد تغيير في قاعدة المعرفة. في التسعين دقيقة: فرز أول دون ذكاء اصطناعي، ثم الدليل مطبقًا (الاحتواء والأدلة وقرار الإشعار)، ثم بطاقة واقعة متغيرة يوزعها المقيِّم على كل مشارك فيعيد قرار الإشعار دون ذكاء اصطناعي (اختيار المقرر: قاعدة الأصالة تقيس قراره نفسه)، ثم مراجعة بلا لوم يقودها كل مشارك مرة في ثلاثية بالأدوار (`labs/files/capstone/role_cards.html`). وخلال خمسة أيام عمل: اختبار ضابط واحد (`labs/files/capstone/followup_task.html`) ومكالمة دفاع من خمس دقائق.
+دليل استجابة وخطة مراقبة يُطبَّقان على حادثة جديدة في جلسة موقوتة تحت الملاحظة؛ وتنفذ مهمة المتابعة اختبارًا لأحد الضوابط. الحادثة في `labs/files/capstone/`: عملاء يسحبون مطالبات تسرب المياه بعد محادثة مع «شَفيف». في التسعين دقيقة: فرز أول دون ذكاء اصطناعي، ثم الدليل مطبقًا (الاحتواء والأدلة وقرار الإشعار)، ثم بطاقة واقعة متغيرة يوزعها المقيِّم على كل مشارك فيعيد قرار الإشعار، ثم مراجعة بلا لوم يقودها كل مشارك مرة في ثلاثية بالأدوار (`labs/files/capstone/role_cards.html`). وخلال خمسة أيام عمل: اختبار ضابط واحد (`labs/files/capstone/followup_task.html`) ومكالمة دفاع من خمس دقائق.
 
 التسليم: عمل فردي، رابط لمجلد مشترك في Google Drive. سلم التقدير: الفرز الأول والاحتواء 15، والدليل مطبقًا 20، وإعادة قرار الإشعار بعد الواقعة المتغيرة 20، والمراجعة بلا لوم 25، واختبار المتابعة والدفاع 20.
 
@@ -126,6 +126,36 @@ assessments/   أسئلة التدريب
 ## المصادر
 
 ### المرجعيات الوطنية
+
+- [اللائحة التنفيذية لنظام حماية البيانات الشخصية، النص العربي (المادة الرابعة والعشرون، والمادة السابعة عشرة)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLawAr.pdf)
+- [Implementing Regulation of the Personal Data Protection Law, English translation (Article 24)](https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf)
+- [Personal Data Protection Law, English translation (Article 20)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf)
+- [سدايا: الدليل الإجرائي لمعالجة حوادث تسرب البيانات الشخصية، الإصدار 1.0 (أكتوبر 2024)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf)
+- [SDAIA: Personal Data Breach Incidents Procedural Guide, issue 1.0 (October 2024)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf)
+- [الهيئة الوطنية للأمن السيبراني: الضوابط الأساسية للأمن السيبراني (ECC-2:2024)، الضابط 2-13](https://cdn.nca.gov.sa/api/files/public/upload/29a9e86a-595f-4af9-8db5-88715a458a14_ECC-2-2024---NCA.pdf)
+- [NCA: Essential Cybersecurity Controls (ECC-2:2024), control 2-13, English edition](https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf)
+- [الهيئة الوطنية للأمن السيبراني: مسودة إرشادات الأمن السيبراني للذكاء الاصطناعي (AICG-1:2026)، للاستطلاع العام](https://cdn.nca.gov.sa/api/files/public/upload/eb6f2457-8b99-403b-b8b9-35352c6feca8_AI_Cybersecurity_Guidelines-_AR--.pdf)
+- [NCA: Draft of AI Cybersecurity Guidelines (AICG-1:2026), English edition](https://cdn.nca.gov.sa/api/files/public/upload/cbf45381-f94f-40c7-9b8c-553fb01b6a3b_AI_Cybersecurity_Controls_EN.pdf)
+- [NCA: NCA Launches Public Consultation on "AI Cybersecurity Guidelines"](https://nca.gov.sa/en/news/ai-cybersecurity-guidelines/)
+- [سدايا: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، النص العربي (مستويات الأثر)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [سدايا: إرشادات الذكاء الاصطناعي التوليدي للجهات الحكومية، النص العربي](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+
+### الاستجابة للحوادث والمراجعة
+
+- [NIST SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management (April 2025)](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- [NIST SP 800-86, Guide to Integrating Forensic Techniques into Incident Response](https://csrc.nist.gov/pubs/sp/800/86/final)
+- [Google, Site Reliability Engineering, chapter 15: Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/)
+
+### سجلات الحوادث وآثار التنفيذ
+
+- [AI Incident Database](https://incidentdatabase.ai/)
+- [OECD.AI: AIM, AI Incidents and Hazards Monitor](https://oecd.ai/en/incidents)
+- [OpenTelemetry: Semantic conventions for generative AI systems](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
+- [Langfuse documentation: Observability overview](https://langfuse.com/docs/observability/overview)
+- [Arize Phoenix documentation](https://arize.com/docs/phoenix)
+<!-- /academy:sources -->
+
+### النصوص الرسمية للمرجعيات الوطنية
 
 - نظام حماية البيانات الشخصية (المادة العشرون): الترجمة الإنجليزية <https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf>. ولائحته التنفيذية (المادتان السابعة عشرة والرابعة والعشرون)، النص العربي المعتمد <https://sdaia.gov.sa/ar/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLawAr.pdf>، والإنجليزي <https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf>. والدليل الإجرائي لمعالجة حوادث تسرب البيانات الشخصية (سدايا، الإصدار 1.0، أكتوبر 2024): <https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf>، والإنجليزي <https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf>. النظام واللائحة والدليل نافذة.
 - الضوابط الأساسية للأمن السيبراني (ECC-2:2024، الضابط 2-13) الصادرة عن الهيئة الوطنية للأمن السيبراني: <https://cdn.nca.gov.sa/api/files/public/upload/29a9e86a-595f-4af9-8db5-88715a458a14_ECC-2-2024---NCA.pdf>، والإنجليزي <https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf>.

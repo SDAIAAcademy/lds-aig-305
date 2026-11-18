@@ -22,3 +22,13 @@ const groups = [['65 سنة فأكثر، بلا تطبيق', 40, 18], ['بقية
 console.log('group-harm slide');
 for (const [g, total, returned] of groups) console.log(`  ${g}: ${returned} of ${total} lapsed = ${pct(returned / total)}`);
 console.log(`  total letters ${groups.reduce((a, g) => a + g[1], 0)}`);
+const lapsed = groups.reduce((a, g) => a + g[2], 0), letters = groups.reduce((a, g) => a + g[1], 0);
+console.log(`  lapsed overall ${lapsed} of ${letters} = ${pct(lapsed / letters)}`);
+
+// expand-the-exception and committee-line slides: 2 exceptions in a sample of 22 refusals.
+console.log('expand-the-exception slide');
+console.log(`  2 of ${n} = ${pct(2 / n)}`);
+
+// check-control slide: one exception in a sample of 45 transfers.
+console.log('check-control slide');
+console.log(`  1 of 45 = ${pct(1 / 45)} exceptions, ${pct(44 / 45)} matching`);
