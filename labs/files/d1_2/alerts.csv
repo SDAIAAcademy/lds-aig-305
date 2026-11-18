@@ -1,0 +1,6 @@
+﻿"alert_id","t_min","rule","system","routed_to","acknowledged_by","ack_t_min"
+"ALR-5501","2210","platform.latency_p95","مِحبَرة","#platform-oncall","U-156","2224"
+"ALR-5502","2950","platform.search_timeout","مِحبَرة","#platform-oncall","تميم الفهيد","2958"
+"ALR-5508","3659","mihbara.attachment_owner_mismatch","مِحبَرة","#mihbara-alerts-legacy","",""
+"ALR-5509","4259","mihbara.attachment_owner_mismatch (مكرر، مكتوم 24 ساعة)","مِحبَرة","#mihbara-alerts-legacy","",""
+"ALR-5514","4400","platform.latency_p95","شَفيف","#platform-oncall","U-156","4409"

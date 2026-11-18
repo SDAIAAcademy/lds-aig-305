@@ -1,0 +1,5 @@
+﻿"deploy_id","t_min","config","search_scope","recipient_check","human_only","change_id"
+"DEP-0771","0","v2.7","claim","on","off","مستمر من الشهر السابق"
+"DEP-0779","3480","v2.8","batch","off","off","CHG-0417"
+"DEP-0784","5116","v2.8.1","batch","off","on","CHG-0419"
+"DEP-0786","6180","v2.7","claim","on","off","CHG-0420"

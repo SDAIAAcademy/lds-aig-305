@@ -1,0 +1,3 @@
+﻿"channel","status","note"
+"#platform-oncall","نشطة","يراقبها المناوب"
+"#mihbara-alerts-legacy","متوقفة","أُوقفت المراقبة عند نقل التنبيهات إلى #platform-oncall، ولم يُنقل منها قاعدتا مِحبَرة"

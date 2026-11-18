@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ثلاثة ضوابط بعد الحادثة، وقاعدة اختبارها</title><style>body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;max-width:52rem;margin:0 auto;padding:1rem;line-height:1.85;color:#1e2a36;background:#fbfaf7}
+.bar{font-size:.85rem;background:#eef2f4;border:1px solid #d5dde2;border-radius:.4rem;padding:.4rem .8rem}
+h1{font-size:1.4rem;line-height:1.5;margin:.8rem 0}h2{font-size:1.12rem;margin:1.4rem 0 .3rem}h3{font-size:1rem;margin:1rem 0 .2rem}
+.card{border:1px solid #cfd8dc;border-radius:.4rem;padding:.6rem .9rem;margin:.8rem 0;background:#fff}
+.src{font-size:.85rem;color:#5b6773}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem}td,th{border:1px solid #cfd8dc;padding:.35rem .5rem;text-align:start;vertical-align:top}th{background:#eef2f4}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.warn{border:1px solid #b45309;background:#fff7ed;padding:.4rem .7rem;border-radius:.3rem}</style></head>
+<body>
+<div class="bar">ملف تدريبي · مِجَنّ للتأمين التعاوني شركة افتراضية، وكل بياناتها اصطناعية · المقرر LDS-AIG-305</div>
+<h1>ثلاثة ضوابط بعد الحادثة، وقاعدة اختبارها</h1>
+
+<p>بعد الحادثة اعتمدت لجنة المخاطر والامتثال ثلاثة ضوابط، وطلبت اختبارها على الأشهر الثلاثة الأولى. أنت لا تشغّل أيًا منها، فتختبرها.</p>
+<div class="scroll"><table><tr><th>الضابط</th><th>الاسم</th><th>المالك</th><th>ما يُختبر في كل عنصر من العينة</th><th>المجتمع</th></tr><tr><td>C1</td><td>فصل المهام في التغييرات</td><td>غسان المرشود</td><td>لكل تغيير في عينة: الموافق شخص غير طالب التغيير، ودليل الاختبار مرفق</td><td><span class="ltr">changes_q.csv</span></td></tr><tr><td>C2</td><td>فحص المستلم في رسائل «مِحبَرة»</td><td>معاذ الجلعود</td><td>لكل رسالة في عينة: كل مرفق يخص مطالبة المستلم نفسها</td><td><span class="ltr">outbound_q.csv</span></td></tr><tr><td>C3</td><td>الإفصاح عن الذكاء الاصطناعي في «شَفيف»</td><td>حصة القبلان</td><td>لكل محادثة في عينة: ظهر الإفصاح بأن المجيب مساعد ذكاء اصطناعي في أول رد</td><td><span class="ltr">shafeef_q.csv</span></td></tr></table></div>
+<h2>قاعدة مِجَنّ للعينة (قاعدة الشركة)</h2>
+<ul>
+<li>المعاينة بالسمات: كل عنصر في العينة إما مطابق وإما استثناء.</li>
+<li>حجم العينة من الجدول <span class="ltr">sample_size_table.csv</span>: أصغر عدد يجعل احتمال ألا تظهر أي حالة استثناء، إن كانت نسبة الاستثناء الفعلية تساوي النسبة المقبولة، أقل من 1 ناقص مستوى الثقة. القاعدة: نسبة مقبولة 5% وثقة 95%.</li>
+<li>العناصر تُختار بالأرقام العشوائية المرفقة (<span class="ltr">random_numbers.csv</span>): رقم الصف في المجتمع.</li>
+<li>العتبة: لا استثناء في العينة يعني أن الضابط فعّال للفترة. استثناء واحد أو أكثر يعني أنه غير فعّال، فيوسَّع الفحص لمعرفة النطاق، ويُصعَّد.</li>
+<li>التصعيد: إلى مالك الضابط خلال يوم عمل؛ وإلى مديرة الامتثال في التقرير الشهري؛ وإذا كان الاستثناء حادثة فإلى دليل الفرز.</li>
+<li>رسالة محجوزة لموظف لأن الفحص أوقفها ليست استثناءً: الضابط عمل.</li>
+</ul>
+</body>
+</html>

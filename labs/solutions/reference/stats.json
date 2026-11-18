@@ -1,0 +1,234 @@
+{
+  "incident": {
+    "runs": 443,
+    "emails": 388,
+    "near_misses_before_change": 3,
+    "near_misses": 5,
+    "first_leak": {
+      "t_min": 3489,
+      "email": "E-60193",
+      "trace": "T-00196"
+    },
+    "last_leak": {
+      "t_min": 5079,
+      "email": "E-60298",
+      "trace": "T-00301"
+    },
+    "leak_emails": 46,
+    "leak_to_claimants": 34,
+    "leak_to_adjuster": 12,
+    "foreign_docs": 49,
+    "foreign_attachments": 53,
+    "subjects": 47,
+    "sensitive_docs": 6,
+    "sensitive_subjects": 6,
+    "by_type": {
+      "خطاب الحساب البنكي": 12,
+      "تقدير الإصلاح": 15,
+      "صور الأضرار": 3,
+      "صورة الهوية": 17,
+      "فاتورة العلاج": 4,
+      "التقرير الطبي": 2
+    },
+    "adjuster_docs": 13,
+    "held_human_only": 50,
+    "runs_v28": 110,
+    "hours_change_to_aware": 25.8,
+    "hours_aware_to_contain": 1.5,
+    "deadline_t_min": 9347,
+    "id_copies": 17
+  },
+  "T": {
+    "change": 3480,
+    "complaint": 5010,
+    "escalated": 5012,
+    "aware": 5027,
+    "declared": 5081,
+    "humanOnly": 5116,
+    "rollback": 6180,
+    "end": 7200
+  },
+  "complainant": {
+    "claim": "C-41487",
+    "email": "E-60284"
+  },
+  "alert_t_min": 3659,
+  "deadline_t_min": 9347,
+  "quarter": {
+    "n": 59,
+    "controls": {
+      "C1": {
+        "population": 64,
+        "sample": 59,
+        "sample_exceptions": 0,
+        "sample_exception_rows": [],
+        "population_exceptions": 0
+      },
+      "C2": {
+        "population": 3600,
+        "sample": 59,
+        "sample_exceptions": 0,
+        "sample_exception_rows": [],
+        "population_exceptions": 0
+      },
+      "C3": {
+        "population": 6000,
+        "sample": 59,
+        "sample_exceptions": 3,
+        "sample_exception_rows": [
+          5154,
+          5412,
+          5218
+        ],
+        "population_exceptions": 529
+      }
+    },
+    "c3": {
+      "overall_pct": 8.8,
+      "by_month_pct": [
+        0,
+        0,
+        26.5
+      ],
+      "voice_month3": 529,
+      "voice_month3_pct": 100,
+      "other_channels_month3_pct": 0,
+      "first_day_failing": 61,
+      "held_by_check_c2": 14,
+      "detect_prob_all_months": 99.6
+    }
+  },
+  "capstone": {
+    "ar": {
+      "sessions": 320,
+      "wrong": 300,
+      "pct": 93.8,
+      "withdrew": 20
+    },
+    "en": {
+      "sessions": 100,
+      "wrong": 0,
+      "pct": 0,
+      "withdrew": 0
+    },
+    "wrong_total": 300,
+    "withdrew_total": 20,
+    "followup": {
+      "n": 29,
+      "population": 48,
+      "population_exceptions": 5,
+      "sample_exceptions": 3,
+      "sample_exception_rows": [
+        16,
+        32,
+        41
+      ]
+    }
+  },
+  "triage": [
+    {
+      "id": "R-01",
+      "type": "harmful output",
+      "severity": "S4",
+      "component": "مصدر المعرفة أو الاسترجاع"
+    },
+    {
+      "id": "R-02",
+      "type": "unfair outcome",
+      "severity": "S2",
+      "component": "البيانات"
+    },
+    {
+      "id": "R-03",
+      "type": "undisclosed AI use",
+      "severity": "S3",
+      "component": "الإشراف البشري والإجراءات"
+    },
+    {
+      "id": "R-04",
+      "type": "agent overreach",
+      "severity": "S3",
+      "component": "صلاحيات الأدوات"
+    },
+    {
+      "id": "R-05",
+      "type": "near miss",
+      "severity": "S4",
+      "component": "مصدر المعرفة أو الاسترجاع"
+    },
+    {
+      "id": "R-06",
+      "type": "non-compliance",
+      "severity": "S3",
+      "component": "الإشراف البشري والإجراءات"
+    },
+    {
+      "id": "R-07",
+      "type": "personal data breach",
+      "severity": "S2",
+      "component": "الإعدادات والتعليمات"
+    },
+    {
+      "id": "R-08",
+      "type": "harmful output",
+      "severity": "S1",
+      "component": "النموذج"
+    },
+    {
+      "id": "R-09",
+      "type": "personal data breach",
+      "severity": "S2",
+      "component": "المورد"
+    },
+    {
+      "id": "R-10",
+      "type": "not an incident",
+      "severity": "",
+      "component": ""
+    },
+    {
+      "id": "R-11",
+      "type": "unfair outcome",
+      "severity": "S2",
+      "component": "النموذج"
+    },
+    {
+      "id": "R-12",
+      "type": "harmful output",
+      "severity": "S1",
+      "component": "الإعدادات والتعليمات"
+    }
+  ],
+  "sample_size_table": [
+    [
+      "10%",
+      "90%",
+      22
+    ],
+    [
+      "10%",
+      "95%",
+      29
+    ],
+    [
+      "5%",
+      "90%",
+      45
+    ],
+    [
+      "5%",
+      "95%",
+      59
+    ],
+    [
+      "3%",
+      "90%",
+      76
+    ],
+    [
+      "3%",
+      "95%",
+      99
+    ]
+  ]
+}
