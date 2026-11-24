@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.3 · صياغة ثلاثة إشعارات · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_3_notices.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.3</span>
+<h1>صياغة ثلاثة إشعارات</h1>
+<p>من وقائع التحقيق وقواعد الإشعار، تقرر من يجب إشعاره، ثم تكتب إشعار الجهة المختصة وإشعار أصحاب البيانات وإخطار المورد «تُخوم»، وتربط كل جملة بواقعة.</p>
+<div class="meta"><span>75 دقيقة</span><span>اليوم 1</span><span>الجلسة 3: الإشعار بالتسرب</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <p>جدول قرار الإشعار، وثلاثة إشعارات عن تسرب «مِحبَرة»: إلى الجهة المختصة، وإلى أصحاب البيانات، وإلى المورد «تُخوم لتسوية الخسائر». كل جملة فيها مسندة إلى واقعة. الإشعارات دليل الناتج الثالث: فيها كل عنصر مطلوب، ولا ادعاء لا تسنده واقعة.</p>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d1_3/facts.html" target="_blank"><b>facts.html</b><span>الوقائع المؤكدة وغير المعروفة بعد ثلاثين ساعة من العلم (F1 إلى F12).</span></a>
+    <a href="files/d1_3/notification_rules.html" target="_blank"><b>notification_rules.html</b><span>ما تقوله اللائحة التنفيذية والدليل الإجرائي، وما تضيفه قواعد مِجَنّ.</span></a>
+    <a href="files/d1_3/notification_decision_template.csv" download><b>notification_decision_template.csv</b><span>قالب جدول القرار.</span></a>
+    <a href="files/d1_3/authority_notice_template.md" download><b>authority_notice_template.md</b><span>قالب إشعار الجهة المختصة.</span></a>
+    <a href="files/d1_3/subject_notice_template.md" download><b>subject_notice_template.md</b><span>قالب إشعار صاحب البيانات.</span></a>
+    <a href="files/d1_3/supplier_notice_template.md" download><b>supplier_notice_template.md</b><span>قالب إخطار المورد.</span></a>
+    <a href="files/d1_3/element_checklist.csv" download><b>element_checklist.csv</b><span>قائمة العناصر المطلوبة في كل إشعار ومصدرها.</span></a>
+  </div>
+  <div class="callout note"><b>استخدام الذكاء الاصطناعي:</b> لا يحدد الكتالوج مستواه هنا، فالمساعد مسموح مرشدًا: اطلب منه أن ينقد جملة في إشعارك أو يبسّطها، لا أن يكتب الإشعار. وأنت تفحص كل جملة يقترحها: هل تسندها واقعة؟ لا تُدخل فيه إلا ملفات المختبر، وهي اصطناعية ومصنفة «عام».</div>
+
+  <h2>الخطوات</h2>
+  <div class="step">
+    <h3>1 · اقرأ الوقائع وقواعد الإشعار <span class="min">10 د</span></h3>
+    <p>علّم في الوقائع ما هو مؤكد وما هو غير معروف. وفي القواعد: ما هو نص اللائحة والدليل، وما هو قاعدة الشركة.</p>
+  </div>
+  <div class="step">
+    <h3>2 · املأ جدول قرار الإشعار: من ولماذا والمهلة ومن يعدّ ومن يعتمد <span class="min">10 د</span></h3>
+    <p>خمسة صفوف. احسب المهلة من وقت العلم بالدقائق (<code>t_min</code>). من يعدّ الإشعار لا يعتمده.</p>
+  </div>
+  <div class="step">
+    <h3>3 · اكتب إشعار الجهة المختصة <span class="min">20 د</span></h3>
+    <p>العناصر الخمسة (أ إلى هـ)، ثم ما لا يُعرف بعد ومتى يُستكمل. اكتب رقم الواقعة بجانب كل جملة في العمود الثالث من القالب.</p>
+  </div>
+  <div class="step">
+    <h3>4 · اكتب إشعار أصحاب البيانات بلغة مبسطة <span class="min">15 د</span></h3>
+    <p>نسخة لأصحاب المستندات الصحية، وسطر يبيّن ما يتغير لصاحب صورة الهوية أو خطاب الحساب البنكي. اقرأه كأنك صاحب البيانات: هل تعرف ماذا حدث وماذا تفعل الآن؟</p>
+  </div>
+  <div class="step">
+    <h3>5 · اكتب إخطار «تُخوم» <span class="min">10 د</span></h3>
+    <p>بالبند 9.3 من العقد كما في قواعد مِجَنّ: ما وصلهم، وما يمتنعون عنه، والحذف وتأكيده، والسجل الذي يحتفظون به، وجهة التواصل.</p>
+  </div>
+  <div class="step">
+    <h3>6 · افحص الإشعارات الثلاثة بقائمة العناصر، واربط كل جملة بواقعة <span class="min">10 د</span></h3>
+    <p>كل عنصر في القائمة موجود؟ كل جملة لها رقم واقعة؟ احذف كل جملة لا تجد لها واقعة، ولو بدت مطمئنة.</p>
+  </div>
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اكتب رسالة قصيرة إلى العملاء الذين وصلتهم مستندات غيرهم تطلب الحذف، دون أن تكشف من صاحب المستند.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>من وقت أي واقعة تُحسب مهلة الاثنتين والسبعين ساعة، وما الدقيقة التي تنتهي عندها؟</li>
+    <li>ماذا تكتب في إشعار الجهة المختصة عن بيانات لم تكتمل بعد؟</li>
+    <li>من صاحب البيانات في هذه الحادثة: من استلم المستند أم من يخصه المستند؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <p>المرجع في <code>solutions/reference/notification_decision_reference.csv</code> و<code>notices_reference.md</code>، ويتحقق <code>node labs/solutions/check.mjs 1.3</code> من أن كل رقم في الوقائع يعاد حسابه من سجل البريد وفهرس المستندات، ومن العناصر، والمهلة (الدقيقة 9347: العلم عند الدقيقة 5027 مضافًا إليها 4320)، وفصل المهام.</p>
+    <p>الفخاخ: حساب المهلة من نشر التغيير أو من وقت الشكوى؛ «لا خطر على بياناتك» أو «لم يُفتح أي مرفق» (F8 غير معروف)؛ إشعار المستلمين على أنهم أصحاب البيانات؛ ذكر اسم المهندس أو «خطأ بشري»؛ مسؤولة حماية البيانات تعدّ الإشعار وتعتمده بنفسها؛ إشعار الهيئة الوطنية للأمن السيبراني لأن «الضوابط تطلب ذلك»: الحالة تقول إن الفريق القانوني قرر أنه لا يلزم، ولا يجتهد المشارك في انطباق الضوابط.</p>
+    <p>الوقائع لا تذكر أسباب الحادثة، فلا تُفسد هذه الصفحة المختبر 1.2. الدرجة: 10 من 35.</p>
+  </details>
+</article>
+<nav class="pager"><a href="D1_2_reconstruct.html" rel="prev">→ المختبر السابق</a><a href="D2_1_control_tests.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع 52f63c0</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T18:19:50Z","version":"2027.1.0","commit":"52f63c0"},"course":{"id":"lds-aig-305","code":"LDS-AIG-305","title":"الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-305/","repo":"SDAIAAcademy/lds-aig-305","home":"../index.html"},"lab":{"id":"1.3","title":"صياغة ثلاثة إشعارات","summary":"من وقائع التحقيق وقواعد الإشعار، تقرر من يجب إشعاره، ثم تكتب إشعار الجهة المختصة وإشعار أصحاب البيانات وإخطار المورد «تُخوم»، وتربط كل جملة بواقعة.","minutes":75,"day":1,"unit":"اليوم 1","session":3,"deck":"../slides/day1.html#lab-1-3","prev":"D1_2_reconstruct.html","next":"D2_1_control_tests.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

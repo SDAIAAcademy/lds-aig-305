@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · اختبار ثلاثة ضوابط بالمعاينة · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_control_tests.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>اختبار ثلاثة ضوابط بالمعاينة</h1>
+<p>تكتب خطة مراقبة لثلاثة ضوابط اعتمدتها اللجنة بعد الحادثة، ثم تختبرها بعينات على ثلاثة أشهر من السجلات الاصطناعية، وتوسّع الفحص حيث تجد استثناءً، وتكتب سطر التقرير إلى اللجنة.</p>
+<div class="meta"><span>75 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: التعلم من الحادثة ومراقبة الضوابط</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <p>خطة مراقبة للضوابط الثلاثة التي اعتمدتها لجنة المخاطر والامتثال بعد الحادثة (السمة، والعينة، والعتبة، والتصعيد)، ونتائج اختبارها بعينات على ثلاثة أشهر من السجلات الاصطناعية، وسطر تقرير إلى اللجنة لكل ضابط. النتائج دليل الناتج الخامس: تكشف إخفاق الضابط المزروع. والخطة تعود إليها في مهمة المتابعة.</p>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d2_1/controls.html" target="_blank"><b>controls.html</b><span>الضوابط الثلاثة ومالكوها، وقاعدة مِجَنّ للعينة والعتبة والتصعيد.</span></a>
+    <a href="files/d2_1/monitoring_plan_template.md" download><b>monitoring_plan_template.md</b><span>قالب خطة المراقبة وسطر التقرير.</span></a>
+    <a href="files/d2_1/sample_size_table.csv" download><b>sample_size_table.csv</b><span>حجم العينة بحسب النسبة المقبولة والثقة.</span></a>
+    <a href="files/d2_1/random_numbers.csv" download><b>random_numbers.csv</b><span>أرقام الصفوف المختارة عشوائيًا لكل ضابط.</span></a>
+    <a href="files/d2_1/changes_q.csv" download><b>changes_q.csv</b><span>مجتمع C1: تغييرات الأشهر الثلاثة.</span></a>
+    <a href="files/d2_1/outbound_q.csv" download><b>outbound_q.csv</b><span>مجتمع C2: رسائل «مِحبَرة».</span></a>
+    <a href="files/d2_1/shafeef_q.csv" download><b>shafeef_q.csv</b><span>مجتمع C3: محادثات «شَفيف».</span></a>
+    <a href="files/d2_1/test_results_template.csv" download><b>test_results_template.csv</b><span>قالب النتائج.</span></a>
+  </div>
+  <div class="callout note"><b>استخدام الذكاء الاصطناعي:</b> لا يحدد الكتالوج مستواه هنا، فالمساعد مسموح مرشدًا: يشرح قاعدة العينة أو صيغة في برنامج الجداول. الاختبار نفسه، عنصرًا عنصرًا، عملك. ملفات المختبر اصطناعية ومصنفة «عام».</div>
+
+  <h2>الخطوات</h2>
+  <div class="step">
+    <h3>1 · اقرأ الضوابط الثلاثة وقاعدة العينة <span class="min">10 د</span></h3>
+    <p>لكل ضابط: ما الخطر الذي يعالجه، ومن يملكه، وما الذي يثبت في سجل واحد أنه عمل. لاحظ قاعدة الرسالة المحجوزة.</p>
+  </div>
+  <div class="step">
+    <h3>2 · املأ خطة المراقبة: السمة والعينة والعتبة والتصعيد لكل ضابط <span class="min">15 د</span></h3>
+    <p>اقرأ حجم العينة من الجدول بقاعدة مِجَنّ، واكتب سببه في سطر. المختبِر غير المالك: اكتب من يختبر.</p>
+  </div>
+  <div class="step">
+    <h3>3 · اختر العينات بالأرقام العشوائية واختبر كل عنصر <span class="min">30 د</span></h3>
+    <p>لكل ضابط: الصفوف التي في <code>random_numbers.csv</code> تقابل <code>row_no</code> في المجتمع. علّم كل عنصر مطابقًا أو استثناءً، واكتب أرقام صفوف الاستثناءات. صيغة بحث في برنامج الجداول (مثل <code>XLOOKUP</code> أو <code>VLOOKUP</code>) تجلب الصفوف.</p>
+  </div>
+  <div class="step">
+    <h3>4 · قيّم النتيجة، ووسّع الفحص حيث وجدت استثناءً <span class="min">10 د</span></h3>
+    <p>فعّال أو غير فعّال بالعتبة. وحيث وجدت استثناءً: صفِّ المجتمع كله بما يشترك فيه الاستثناء (الشهر، والقناة، والقالب) لتعرف النطاق. هل تضررت فئة أكثر من غيرها؟</p>
+  </div>
+  <div class="step">
+    <h3>5 · اكتب سطر التقرير إلى اللجنة لكل ضابط <span class="min">10 د</span></h3>
+    <p>النتيجة، والعينة والاستثناءات، والنطاق، والقرار المطلوب من اللجنة، ومن يتصرف وخلال أي مدة. وإن كان الاستثناء حادثة، فأين فرزتها؟</p>
+  </div>
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>احسب احتمال أن تكشف العينة التي قرأت حجمها في الخطوة 2 الإخفاقَ لو سُحبت من الشهرين الأولين وحدهما، ثم من الشهر الثالث وحده، واكتب ما يعنيه ذلك لتوقيت الاختبار.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>لماذا لا تُعد رسالة حجزها فحص المستلم استثناءً في C2؟</li>
+    <li>بعد أن وجدت استثناءً في عينة، كيف تعرف كم محادثة مسها الإخفاق ومنذ متى؟</li>
+    <li>من يختبر الضابط، ولماذا ليس مالكه؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <p>المرجع في <code>solutions/reference/monitoring_plan_reference.md</code> و<code>test_results_reference.csv</code>، ويعيد حسابه <code>node labs/solutions/check.mjs 2.1</code>. العينة 59 لكل ضابط (نسبة مقبولة 5%، ثقة 95%). مجتمع C1 صغير (64 تغييرًا)، فالعينة تكاد تكون المجتمع كله: الصيغة تفترض مجتمعًا كبيرًا، وفي مجتمع صغير كهذا يُفحص كله عادة. قل ذلك إن سأل أحد، والحكم لا يتغير. والأمر نفسه في مهمة المتابعة (29 من 48). C1 وC2 لا استثناء فيهما: فعّالان. C3 فيه ثلاثة استثناءات في العينة: غير فعّال. بعد التوسيع: كل محادثات الهاتف بالقالب IVR-v3 منذ اليوم 61، 529 محادثة، أي كل محادثات الهاتف في الشهر الثالث، ولا استثناء في التطبيق والموقع. الفئة التي تضررت أكثر: المتصلون بالهاتف.</p>
+    <p>الفخاخ: عدّ الرسائل الأربع عشرة المحجوزة استثناءات في C2؛ التوقف عند «ثلاثة من 59، نحو 5%» دون توسيع؛ إغفال الفرز: الاستثناء نفسه حادثة «استخدام غير مُفصح عنه» بضرر 2 ونطاق 3، الشدة S2؛ كتابة المالكة مختبِرة لضابطها.</p>
+    <p>الإضافي: الإخفاق لا يوجد في الشهرين الأولين، فاحتمال الكشف فيهما صفر؛ وفي الشهر الثالث وحده نسبة الاستثناء 26.5%، فاحتمال ألا تظهر في عينة من 59 عنصرًا شبه معدوم. لذلك يُعاد الاختبار بعد كل تغيير في القالب.</p>
+    <p>الدرجة: 7 من 35، على الخطة والنتائج وسطر اللجنة.</p>
+  </details>
+</article>
+<nav class="pager"><a href="D1_3_notices.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع 52f63c0</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T18:19:50Z","version":"2027.1.0","commit":"52f63c0"},"course":{"id":"lds-aig-305","code":"LDS-AIG-305","title":"الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-305/","repo":"SDAIAAcademy/lds-aig-305","home":"../index.html"},"lab":{"id":"2.1","title":"اختبار ثلاثة ضوابط بالمعاينة","summary":"تكتب خطة مراقبة لثلاثة ضوابط اعتمدتها اللجنة بعد الحادثة، ثم تختبرها بعينات على ثلاثة أشهر من السجلات الاصطناعية، وتوسّع الفحص حيث تجد استثناءً، وتكتب سطر التقرير إلى اللجنة.","minutes":75,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_3_notices.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-24T18:19:50Z",
+    "version": "2027.1.0",
+    "commit": "52f63c0"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "totals": {
+    "decks": 3,
+    "slides": 71,
+    "words": 4922,
+    "notes": 70,
+    "notes_ratio": 0.99,
+    "activities": 5,
+    "styles": 0,
+    "slide_minutes": null,
+    "components": {
+      "cards": 45,
+      "pills": 0,
+      "callouts": 48,
+      "tables": 14,
+      "code": 2,
+      "tokens": 0,
+      "flows": 5,
+      "stats": 2,
+      "bars": 0,
+      "meters": 0,
+      "agendas": 2,
+      "quizzes": 5,
+      "checklists": 4,
+      "prompts": 0,
+      "chats": 0,
+      "tools": 0,
+      "traces": 0,
+      "ladders": 0,
+      "figures": 0,
+      "matrices": 0,
+      "timers": 5,
+      "columns": 37,
+      "images": 0,
+      "drawings": 0,
+      "fragments": 14
+    },
+    "minutes": 480
+  },
+  "decks": [
+    {
+      "deck": "day1",
+      "kind": "day",
+      "label": "اليوم 1",
+      "title": "من البلاغ إلى الإشعار",
+      "slides": 36,
+      "words": 2718,
+      "notes": 36,
+      "notes_ratio": 1,
+      "activities": 3,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 33,
+        "pills": 0,
+        "callouts": 25,
+        "tables": 5,
+        "code": 2,
+        "tokens": 0,
+        "flows": 3,
+        "stats": 2,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 3,
+        "checklists": 3,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 20,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 0
+      },
+      "minutes": 360,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "الحوادث والفرز",
+          "slides": 11,
+          "words": 921,
+          "notes": 11,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 10,
+            "pills": 0,
+            "callouts": 9,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 2,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 7,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "الأدلة وإعادة بناء الحادثة",
+          "slides": 10,
+          "words": 684,
+          "notes": 10,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 6,
+            "pills": 0,
+            "callouts": 7,
+            "tables": 2,
+            "code": 2,
+            "tokens": 0,
+            "flows": 2,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        },
+        {
+          "n": 3,
+          "label": "الجلسة 3",
+          "title": "الإشعار بالتسرب",
+          "slides": 12,
+          "words": 919,
+          "notes": 12,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 14,
+            "pills": 0,
+            "callouts": 8,
+            "tables": 1,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 7,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        }
+      ]
+    },
+    {
+      "deck": "day2",
+      "kind": "day",
+      "label": "اليوم 2",
+      "title": "من المراجعة إلى المراقبة",
+      "slides": 20,
+      "words": 1401,
+      "notes": 20,
+      "notes_ratio": 1,
+      "activities": 2,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 8,
+        "pills": 0,
+        "callouts": 14,
+        "tables": 6,
+        "code": 0,
+        "tokens": 0,
+        "flows": 2,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 2,
+        "checklists": 1,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 1,
+        "columns": 9,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 14
+      },
+      "minutes": 120,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "التعلم من الحادثة ومراقبة الضوابط",
+          "slides": 17,
+          "words": 1272,
+          "notes": 17,
+          "notes_ratio": 1,
+          "activities": 2,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 5,
+            "pills": 0,
+            "callouts": 13,
+            "tables": 6,
+            "code": 0,
+            "tokens": 0,
+            "flows": 2,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 2,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 1,
+            "columns": 8,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 14
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        }
+      ]
+    },
+    {
+      "deck": "capstone",
+      "kind": "capstone",
+      "label": "المشروع الختامي",
+      "title": "التمرين المراقَب واختبار المتابعة",
+      "slides": 15,
+      "words": 803,
+      "notes": 14,
+      "notes_ratio": 0.93,
+      "activities": 0,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 4,
+        "pills": 0,
+        "callouts": 9,
+        "tables": 3,
+        "code": 0,
+        "tokens": 0,
+        "flows": 0,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 0,
+        "quizzes": 0,
+        "checklists": 0,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 4,
+        "columns": 8,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 0
+      },
+      "minutes": null,
+      "sessions": []
+    }
+  ],
+  "coverage": [
+    {
+      "id": "LO1",
+      "text": "يصنف بلاغات الحوادث بحسب النوع والضرر والشدة والمكوّن الذي أخفق، استنادًا إلى اثني عشر بلاغًا ومصفوفة للشدة، وضمن مهلة زمنية محددة",
+      "level": "Applied",
+      "slides": [
+        "day1#before-we-start",
+        "day1#four-words",
+        "day1#ai-types",
+        "day1#precedence",
+        "day1#severity-matrix",
+        "day1#reach-in-batches",
+        "day1#failed-component",
+        "day1#public-records",
+        "day1#containment",
+        "day1#check-triage",
+        "capstone#the-incident",
+        "capstone#deliverables",
+        "capstone#rubric",
+        "capstone#first-triage"
+      ],
+      "activities": [
+        "day1#check-triage-q1"
+      ],
+      "sessions": [
+        "day1/1"
+      ],
+      "labs": [
+        "1.1"
+      ],
+      "questions": [
+        "q-lo1-1",
+        "q-lo1-2",
+        "q-lo1-3",
+        "q-lo1-4"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO2",
+      "text": "يحلل آثار التنفيذ وسجلات التغيير لإعادة بناء الحادثة وتحديد الضوابط التي أخفقت، استنادًا إلى سجلات وكيل سرّب بيانات العملاء",
+      "level": "Applied",
+      "slides": [
+        "day1#preserve-first",
+        "day1#chain-of-custody",
+        "day1#trace-anatomy",
+        "day1#filter-by-time-and-id",
+        "day1#four-records",
+        "day1#factors-not-names",
+        "day1#failed-controls",
+        "day1#check-evidence",
+        "capstone#the-incident",
+        "capstone#playbook-applied"
+      ],
+      "activities": [
+        "day1#check-evidence-q1"
+      ],
+      "sessions": [
+        "day1/2"
+      ],
+      "labs": [
+        "1.2"
+      ],
+      "questions": [
+        "q-lo2-5",
+        "q-lo2-6",
+        "q-lo2-7",
+        "q-lo2-8"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO3",
+      "text": "يصوغ الإشعارات التي تستوجبها حادثة التسرب إلى الجهة المختصة بحماية البيانات والمتأثرين وأحد الموردين، استنادًا إلى الوقائع وقواعد الإبلاغ والقوالب",
+      "level": "Applied",
+      "slides": [
+        "day1#two-duties",
+        "day1#authority-elements",
+        "day1#subject-notice",
+        "day1#suppliers",
+        "day1#state-uncertainty",
+        "day1#other-reports",
+        "day1#who-signs",
+        "day1#check-notice",
+        "capstone#deliverables",
+        "capstone#rubric",
+        "capstone#playbook-applied",
+        "capstone#changed-fact"
+      ],
+      "activities": [
+        "day1#check-notice-q1"
+      ],
+      "sessions": [
+        "day1/3"
+      ],
+      "labs": [
+        "1.3"
+      ],
+      "questions": [
+        "q-lo3-9",
+        "q-lo3-10",
+        "q-lo3-11",
+        "q-lo3-12"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO4",
+      "text": "يقود مراجعة بلا لوم لما بعد الحادثة، ويقرر الإجراءات التصحيحية، مع فريق يؤدي أفراده أدوارًا محددة",
+      "level": "Performance",
+      "slides": [
+        "day1#factors-not-names",
+        "day2#after-the-test",
+        "day2#why-blameless",
+        "day2#review-record",
+        "day2#questions-that-work",
+        "day2#harm-by-group",
+        "day2#role-play",
+        "day2#check-review",
+        "capstone#deliverables",
+        "capstone#rubric",
+        "capstone#triad-review"
+      ],
+      "activities": [
+        "day2#check-review-q1"
+      ],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-lo4-13",
+        "q-lo4-14",
+        "q-lo4-15",
+        "q-lo4-16"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO5",
+      "text": "يصمم خطة لمراقبة الامتثال تتضمن اختبارات الضوابط والعتبات والتصعيد، على سجلات اصطناعية تغطي ثلاثة أشهر",
+      "level": "Performance",
+      "slides": [
+        "day2#incidents-as-tests",
+        "day2#control-test-anatomy",
+        "day2#sample-size",
+        "day2#sample-timing",
+        "day2#expand-the-exception",
+        "day2#committee-line",
+        "day2#check-control",
+        "capstone#deliverables",
+        "capstone#rubric",
+        "capstone#follow-up",
+        "capstone#defence-call",
+        "capstone#what-next"
+      ],
+      "activities": [
+        "day2#check-control-q1"
+      ],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-lo5-17",
+        "q-lo5-18",
+        "q-lo5-19",
+        "q-lo5-20"
+      ],
+      "covered": true
+    }
+  ]
+}

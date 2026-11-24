@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · إعادة بناء تسرب «مِحبَرة» من آثار التنفيذ · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_reconstruct.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>إعادة بناء تسرب «مِحبَرة» من آثار التنفيذ</h1>
+<p>تحفظ أدلة الحادثة INC-0310، ثم تعيد بناءها من آثار تنفيذ «مِحبَرة» وسجل البريد وسجلات التغيير والنشر والتنبيهات، وتكتب تسلسلًا زمنيًا بقيد لكل عامل والضوابط التي أخفقت.</p>
+<div class="meta"><span>75 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: الأدلة وإعادة بناء الحادثة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <p>سجل أدلة للحادثة INC-0310 فيه بصمة كل ملف وقرارك في نسخة مشكوك فيها، وتسلسل زمني لتسرب «مِحبَرة» يستشهد بقيد من السجل لكل عامل، والضوابط التي أخفقت. التسلسل دليل الناتج الثاني.</p>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d1_2/incident_ticket.html" target="_blank"><b>incident_ticket.html</b><span>البلاغ كما وصل، والمحادثة التي بدأت بها الحادثة.</span></a>
+    <a href="files/d1_2/evidence_manifest.csv" download><b>evidence_manifest.csv</b><span>بيان الأدلة: الملفات التسعة ومصدرها ومن صدّرها وبصمتها.</span></a>
+    <a href="files/d1_2/mihbara_spans.csv" download><b>mihbara_spans.csv</b><span>آثار تنفيذ «مِحبَرة» في جدول: وحدة لكل سطر، خمسة أيام.</span></a>
+    <a href="files/d1_2/mihbara_traces.jsonl" download><b>mihbara_traces.jsonl</b><span>الآثار نفسها بصيغة JSON Lines، كما يصدّرها عارض آثار التنفيذ.</span></a>
+    <a href="files/d1_2/email_log.csv" download><b>email_log.csv</b><span>الرسائل التي أرسلها الوكيل ومرفقاتها.</span></a>
+    <a href="files/d1_2/documents_index.csv" download><b>documents_index.csv</b><span>كل مستند: مطالبته وصاحبه ونوعه وهل هو حساس.</span></a>
+    <a href="files/d1_2/change_log.csv" download><b>change_log.csv</b><span>سجل التغييرات.</span></a>
+    <a href="files/d1_2/deploy_log.csv" download><b>deploy_log.csv</b><span>سجل النشر وإعدادات كل إصدار.</span></a>
+    <a href="files/d1_2/alerts.csv" download><b>alerts.csv</b><span>التنبيهات وأين وُجّهت ومن قرأها.</span></a>
+    <a href="files/d1_2/alert_channels.csv" download><b>alert_channels.csv</b><span>قنوات التنبيه وحالتها.</span></a>
+    <a href="files/d1_2/escalations.csv" download><b>escalations.csv</b><span>التصعيدات من «شَفيف» إلى الموظفين.</span></a>
+    <a href="files/d1_2/forwarded_copy_traces.jsonl" download><b>forwarded_copy_traces.jsonl</b><span>نسخة من الآثار أرسلها زميل بالبريد «لتوفير الوقت».</span></a>
+    <a href="files/d1_2/evidence_register_template.csv" download><b>evidence_register_template.csv</b><span>قالب سجل الأدلة.</span></a>
+    <a href="files/d1_2/timeline_template.csv" download><b>timeline_template.csv</b><span>قالب التسلسل الزمني.</span></a>
+  </div>
+  <div class="callout note"><b>استخدام الذكاء الاصطناعي:</b> مرشد في قراءة الآثار، كما يحدد الكتالوج: اسأله ما معنى وحدة أو حقل، أو كيف تصفّي جدولًا، ولا تطلب منه التسلسل. الأوقات كلها بالدقائق من بداية نافذة السجلات (<code>t_min</code>)، والساعة 60 دقيقة.</div>
+  <div class="callout tip"><b>عارض الآثار.</b> الجدول <code>mihbara_spans.csv</code> يكفي في أي برنامج جداول: صفِّ بعمود <code>name</code> وبعمود <code>t_min</code> وبمعرّف المطالبة. ومن يفضّل عارض آثار يمكنه تحميل ملف JSON Lines في دفتر Python؛ لم نشغّل المختبر في Langfuse أو Arize Phoenix.</div>
+
+  <h2>الخطوات</h2>
+  <div class="step">
+    <h3>1 · اقرأ بلاغ الحادثة INC-0310 وبيان الأدلة <span class="min">10 د</span></h3>
+    <p>اكتب في سطر واحد ما تريد أن تعرفه: متى بدأ الأمر، وما الذي تغير، وكم رسالة، ومتى توقف. ثم انظر في البيان: من أين جاء كل ملف، ومن صدّره.</p>
+  </div>
+  <div class="step">
+    <h3>2 · احفظ الأدلة: تحقق من بصمة ملفين، وسجّلهما، وقرر في النسخة التي وصلت بالبريد <span class="min">15 د</span></h3>
+    <p>احسب بصمة SHA-256 لملف <code>mihbara_traces.jsonl</code> ولملف <code>forwarded_copy_traces.jsonl</code>، وقارنهما بالبيان. في Windows: <code>certutil -hashfile mihbara_traces.jsonl SHA256</code>؛ وفي macOS وLinux: <code>shasum -a 256 mihbara_traces.jsonl</code>. سجّل في سجل الأدلة: الملف، ومصدره، ومن صدّره، ومن تسلّمه، وهل طابقت البصمة، وأين حُفظ.</p>
+  </div>
+  <div class="step">
+    <h3>3 · صفِّ آثار التنفيذ بالوقت ومعرّف المطالبة، وجد أول رسالة وآخر رسالة فيها مستند من مطالبة أخرى <span class="min">20 د</span></h3>
+    <p>في <code>mihbara_spans.csv</code> صفِّ الوحدات <code>tool.attach_document</code>، وقارن <code>doc_owner_claim</code> بـ<code>claim_id</code>. الأثر الذي فيه مرفق غريب: هل انتهى بـ<code>tool.send_email</code> أم بـ<code>mihbara.hold_for_staff</code>؟ ثم تحقق من رسالة واحدة في <code>email_log.csv</code> و<code>documents_index.csv</code>.</p>
+    <div class="prompt" data-tool="مساعد مرشد">لا تحلل الملف عني. اشرح لي ما تعنيه هذه الوحدة في أثر تنفيذ وكيل، وأي حقولها يدل على أن المرفق من مطالبة أخرى: <span class="ph">سطر من mihbara_spans.csv</span></div>
+  </div>
+  <div class="step">
+    <h3>4 · اربط سجلات التغيير والنشر والتنبيهات بالتسلسل، وحدد الضوابط التي أخفقت <span class="min">20 د</span></h3>
+    <p>ما الذي تغير قبل أول مرفق غريب، ومن طلبه ومن وافق عليه، وكيف اختُبر؟ ما الإعدادات التي نُشرت؟ هل أطلق أي نظام تنبيهًا، وإلى أين ذهب؟ لكل عامل: الضابط الذي كان يجب أن يمنعه أو يكشفه.</p>
+  </div>
+  <div class="step">
+    <h3>5 · اكتب التسلسل الزمني بقيد من السجل لكل عامل <span class="min">10 د</span></h3>
+    <p>سطر لكل خطوة في القالب: <code>t_min</code>، وما حدث، والملف، والقيد (معرّف التغيير أو النشر أو التنبيه أو الأثر)، وهل هو عامل، والضابط الذي أخفق. لا عامل دون قيد. ولا اسم شخص في عمود الضابط.</p>
+  </div>
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>حمّل <code>mihbara_traces.jsonl</code> في دفتر Python، وارسم عدد المرفقات من مطالبات أخرى في كل ساعة من النافذة.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>لماذا لا تُستخدم النسخة التي وصلت بالبريد، ولو بدت كاملة؟</li>
+    <li>كم دقيقة مرت بين أول مرفق غريب وأول تنبيه، ولماذا لم يتحرك أحد بعد التنبيه؟</li>
+    <li>هل أُرسلت رسالة فيها مستند من مطالبة أخرى بعد أن علمت الشركة؟ ما القيد الذي يثبت جوابك؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <p>المرجع في <code>solutions/reference/timeline_reference.csv</code> و<code>evidence_register_reference.csv</code>، ويعيد حسابهما <code>node labs/solutions/check.mjs 1.2</code> من الملفات. العوامل ستة: CHG-0417 طلبه ووافق عليه الشخص نفسه، واختُبر لزمن الاستجابة فقط، والنشر DEP-0779 بنطاق بحث الدفعة وفحص المستلم متوقف، وأول رسالة E-60193 في الأثر T-00196 عند الدقيقة 3489، والتنبيه ALR-5508 إلى قناة متوقفة دون قراءة، وآخر رسالة E-60298 عند الدقيقة 5079، أي بعد العلم (الدقيقة 5027) وقبل الاحتواء (الدقيقة 5116). الضوابط التي أخفقت: فصل المهام في الموافقة، واختبار الانحدار قبل النشر، وفحص المستلم، وتوجيه التنبيهات، وسرعة الاحتواء.</p>
+    <p>النسخة المرسلة بالبريد لا تطابق بصمتها أي ملف في البيان، وقد حُذفت منها أربعة مرفقات غريبة من أول ثلاثة آثار: من يستخدمها يبدأ التسلسل متأخرًا. تُسجَّل وتُحفظ منفصلة ولا تُستخدم.</p>
+    <p>الفخاخ: عدّ الآثار التي فيها مرفق غريب كلها رسائل مسربة، مع أن خمسة منها أوقفها الفحص في الإعداد v2.7 وسبعة عشر حُجزت في وضع الموظف فقط؛ وكتابة «خطأ المهندس» عاملًا: العامل أن النظام سمح بموافقة الطالب على تغييره. لا تُكمل هنا قرار الإشعار: هو المختبر 1.3.</p>
+    <p>الدرجة: 10 من 35، على قيد لكل عامل وعلى الضوابط التي أخفقت.</p>
+  </details>
+</article>
+<nav class="pager"><a href="D1_1_triage.html" rel="prev">→ المختبر السابق</a><a href="D1_3_notices.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع 52f63c0</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T18:19:50Z","version":"2027.1.0","commit":"52f63c0"},"course":{"id":"lds-aig-305","code":"LDS-AIG-305","title":"الاستجابة لحوادث الذكاء الاصطناعي ومراقبة الامتثال","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-305/","repo":"SDAIAAcademy/lds-aig-305","home":"../index.html"},"lab":{"id":"1.2","title":"إعادة بناء تسرب «مِحبَرة» من آثار التنفيذ","summary":"تحفظ أدلة الحادثة INC-0310، ثم تعيد بناءها من آثار تنفيذ «مِحبَرة» وسجل البريد وسجلات التغيير والنشر والتنبيهات، وتكتب تسلسلًا زمنيًا بقيد لكل عامل والضوابط التي أخفقت.","minutes":75,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_triage.html","next":"D1_3_notices.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
